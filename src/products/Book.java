@@ -39,7 +39,7 @@ public class Book extends Product {
     @Override
     public String toString() {
         String baseString = super.toString();
-        return baseString + " ,Author=" + author + " ,Publication=" + publication + " ,Genre=" + genre;
+        return baseString + " ,Author=" + getAuthor() + " ,Publication=" + getPublication() + " ,Genre=" + getGenre();
     }
 
     @Override
