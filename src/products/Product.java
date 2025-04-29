@@ -25,19 +25,19 @@ public abstract class Product {
         return id;
     }
 
-    public void setId(String id) {
+    protected void setId(String id) {
         this.id = id;
     }
 
-    public Product(String title, Double price, String id) {
+    public Product(String title, Double price) {
         setTitle(title);
         setPrice(price);
-        setId(id);
+        setId(generateId());
     }
 
     @Override
     public String toString() {
-        return "Product [title=" + title + ", price=" + price + ", id=" + id + "]";
+        return "Title=" + title + " ,Price=" + price + " ,ID=" + id;
     }
 
     protected abstract String generateId();
