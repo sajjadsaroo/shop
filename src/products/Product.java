@@ -3,7 +3,7 @@ package products;
 public abstract class Product {
     private String title;
     private Double price;
-    private String id;
+    private final String id;
 
     public String getTitle() {
         return title;
@@ -18,6 +18,9 @@ public abstract class Product {
     }
 
     public void setPrice(Double price) {
+        if(price < 0)
+            throw new IllegalArgumentException("Price cannot be negative");
+
         this.price = price;
     }
 
@@ -25,14 +28,11 @@ public abstract class Product {
         return id;
     }
 
-    protected void setId(String id) {
-        this.id = id;
-    }
 
     public Product(String title, Double price) {
         setTitle(title);
         setPrice(price);
-        setId(generateId());
+        this.id = generateId();
     }
 
     @Override

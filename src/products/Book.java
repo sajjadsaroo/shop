@@ -7,9 +7,11 @@ public class Book extends Product {
     private static int counter = 1;
 
 
-    public Book(Double price, String title, String author, String publication, String genre) {
+    public Book(String title, double price, String author, String publication, String genre) {
         super(title, price);
-
+        this.author = author;
+        this.publication = publication;
+        this.genre = genre;
     }
 
     public String getAuthor() {
