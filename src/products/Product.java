@@ -29,6 +29,12 @@ public abstract class Product {
         this.id = id;
     }
 
+    public Product(String title, Double price, String id) {
+        setTitle(title);
+        setPrice(price);
+        setId(id);
+    }
+
     @Override
     public String toString() {
         return "Product [title=" + title + ", price=" + price + ", id=" + id + "]";
