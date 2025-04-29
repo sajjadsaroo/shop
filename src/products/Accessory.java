@@ -26,7 +26,7 @@ public class Accessory extends Product{
     @Override
     protected String generateId() {
         if (counter > 999)
-            throw new IllegalStateException("Book ID limit reached");
+            throw new IllegalStateException("Accessory ID limit reached");
         return "3" + String.format("%03d", counter++);
     }
 

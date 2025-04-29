@@ -37,7 +37,7 @@ public class Notebook extends Product {
     @Override
     protected String generateId() {
         if (counter > 999)
-            throw new IllegalStateException("Book ID limit reached");
+            throw new IllegalStateException("NoteBook ID limit reached");
         return "2" + String.format("%03d", counter++);
     }
 }
